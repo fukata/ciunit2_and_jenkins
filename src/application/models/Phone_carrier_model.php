@@ -6,6 +6,6 @@ class Phone_carrier_model extends CI_Model {
 	}
 
 	public function getCarriers() {
-		return $this->db->get('phone_carrier');
+		return $this->db->get('phone_carrier')->result();
 	}
 }
