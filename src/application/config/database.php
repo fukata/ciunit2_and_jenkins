@@ -45,12 +45,15 @@
 */
 
 $active_group = 'default';
+if (defined('CIUnit_Version')) {
+	$active_group .= '_test';
+}
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = '';
+$db['default']['username'] = 'root';
 $db['default']['password'] = '';
-$db['default']['database'] = '';
+$db['default']['database'] = 'ci_jenkins';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
@@ -62,6 +65,23 @@ $db['default']['dbcollat'] = 'utf8_general_ci';
 $db['default']['swap_pre'] = '';
 $db['default']['autoinit'] = TRUE;
 $db['default']['stricton'] = FALSE;
+
+
+$db['default_test']['hostname'] = 'localhost';
+$db['default_test']['username'] = 'root';
+$db['default_test']['password'] = '';
+$db['default_test']['database'] = 'ci_jenkins_test';
+$db['default_test']['dbdriver'] = 'mysql';
+$db['default_test']['dbprefix'] = '';
+$db['default_test']['pconnect'] = TRUE;
+$db['default_test']['db_debug'] = TRUE;
+$db['default_test']['cache_on'] = FALSE;
+$db['default_test']['cachedir'] = '';
+$db['default_test']['char_set'] = 'utf8';
+$db['default_test']['dbcollat'] = 'utf8_general_ci';
+$db['default_test']['swap_pre'] = '';
+$db['default_test']['autoinit'] = TRUE;
+$db['default_test']['stricton'] = FALSE;
 
 
 /* End of file database.php */
